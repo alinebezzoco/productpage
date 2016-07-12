@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+    <meta charset="utf-8">
+    <title>Teste Profit-e</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body ng-controller="SacolaController">
+    <header>
+      <div class="container">
+        <div class="col-lg-05">
+          <img src="assets/img/logo.png" />
+        </div>
+
+        <div class="col-lg-05 sacola">
+            <i class="bag">
+              <p>
+                {{ sacola.obterTotal() }} 
+              </p>              
+            </i>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+        <div class="col-xd-10 col-td-10 col-md-08 col-lg-09 nome-pagina">
+          <h1>VESTIDOS</h1>
+        </div>
+        <div class="col-td-02 col-md-02 col-lg-01 select">
+          <select>
+            <option selected>Ordenar por:</option>
+            <option value="recente">Mais recentes</option>
+            <option value="menor">Menor preço</option>
+            <option value="maior">Maior preço</option>
+          </select>
+        </div>
+        <form>
+        </form>
+        <div class="wrapper">
+            <div class="filtro-busca">
+                <form>
+                    <h2>Cores</h2>
+                    <div class="radio cores">
+                        <input id="amarelo" type="radio" name="cor" value="amarelo">
+                        <label for="amarelo"><span></span>Amarelo</label>
+                        <input id="azul" type="radio" name="cor" value="azul">
+                        <label for="azul"><span></span>Azul</label>
+                        <input id="branco" type="radio" name="cor" value="branco">
+                        <label for="branco"><span></span>Branco</label>
+                        <input id="cinza" type="radio" name="cor" value="cinza">
+                        <label for="cinza"><span></span>Cinza</label>
+                        <input id="laranja" type="radio" name="cor" value="laranja">
+                        <label for="laranja"><span></span>Laranja</label>
+                        <!-- ver todas -->
+                        <div class="mais-cores" style="display: none;">
+                          <input id="vermelho" type="radio" name="cor" value="vermelho">
+                          <label for="vermelho"><span></span>Vermelho</label>
+                          <input id="preto" type="radio" name="cor" value="preto">
+                          <label for="preto"><span></span>Preto</label>
+                          <input id="verde" type="radio" name="cor" value="verde">
+                          <label for="verde"><span></span>Verde</label> 
+                          <input id="rosa" type="radio" name="cor" value="rosa">
+                          <label for="rosa"><span></span>Rosa</label> 
+                        </div>                                                                         
+                        <a id="ver-todas" class="ver-todas" href="">Ver todas as cores <i class="seta"></i></a>
+                    </div>
+                    <h2>Tamanhos</h2>
+                    <div class="radio tamanhos">
+                        <input id="pequeno" type="radio" name="tamanho" value="pequeno">
+                        <label for="pequeno"><span>P</span></label>
+                        <input id="medio" type="radio" name="tamanho" value="medio">
+                        <label for="medio"><span>M</span></label>
+                        <input id="grande" type="radio" name="tamanho" value="grande">
+                        <label for="grande"><span>G</span></label>
+                        <input id="extragrande" type="radio" name="tamanho" value="extragrande">
+                        <label for="extragrande"><span>GG</span></label>
+                        <input id="unico" type="radio" name="tamanho" value="unico">
+                        <label for="unico"><span>U</span></label>
+                        <input id="tam36" type="radio" name="tamanho" value="tam36">
+                        <label for="tam36"><span>36</span></label>
+                        <input id="tam38" type="radio" name="tamanho" value="tam38">
+                        <label for="tam38"><span>38</span></label>
+                        <input id="tam40" type="radio" name="tamanho" value="tam40">
+                        <label for="tam40"><span>40</span></label>
+                        <input id="tam42" type="radio" name="tamanho" value="tam42">
+                        <label for="tam42"><span>42</span></label>
+                        <input id="tam44" type="radio" name="tamanho" value="tam44">
+                        <label for="tam44"><span>44</span></label>
+                        <input id="tam46" type="radio" name="tamanho" value="tam46">
+                        <label for="tam46"><span>46</span></label>
+                    </div>
+                    <h2>Faixa de preço</h2>
+                    <div class="radio preco">
+                        <input id="ate50" type="radio" name="preco" value="ate50">
+                        <label for="ate50"><span></span>de R$ 0 até R$ 50</label>
+                        <input id="ate150" type="radio" name="preco" value="ate150">
+                        <label for="ate150"><span></span>de R$ 51 até R$ 150</label>
+                        <input id="ate300" type="radio" name="preco" value="ate300">
+                        <label for="ate300"><span></span>de R$ 151 até R$ 300</label>
+                        <input id="ate500" type="radio" name="preco" value="ate500">
+                        <label for="ate500"><span></span>de R$ 301 até R$ 500</label>
+                        <input id="acima501" type="radio" name="preco" value="acima501">
+                        <label for="acima501"><span></span>a partir de R$ 501</label>
+                    </div>
+                </form>
+            </div>
+            <div id="listaProdutos" class="lista-produtos" ng-controller="ProdutoController">
+                <div id="item{{ produto.id }}" class="col-xd-05 col-td-05 col-md-04 col-ld-03 produto" ng-repeat="produto in produtos | limitTo: paginationLimit()">
+                    <img ng-src="assets{{ produto.imagem }}" alt="">
+                    <h3>{{ produto.nome }}</h3>                    
+                    <div class="descricao-produto">
+                      <p>
+                        <span class="valor-desconto">{{ produto.precoDesconto }}</span>                      
+                        R$ {{ produto.preco }}
+                      </p>
+                      <span>até {{ produto.quantidadeParcela }} de R$ {{ produto.valorParcela }}</span>
+                     </div>   
+                    <a href="" class="comprar" ng-click="comprar()"><i class="carrinho"></i></a>                                                   
+                </div> 
+               <button class="btn-mais" ng-show="hasMoreItemsToShow()" ng-click="showMoreItems()">
+                    Carregar mais
+               </button>                
+            </div>
+        </div>
+      </div>
+    <footer>
+      <p>Profite - CNPJ 05.559.134/0001-60 End: Voluntários da Pátria, 301/702 Botafogo - RJ - 22270-000</p>
+    </footer>
+    <script src="assets/js/lib/jquery.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/lib/angular.js"></script>
+    <script src="assets/js/model/Sacola.js"></script>
+    <script src="assets/js/controller/SacolaController.js"></script>
+    <script src="assets/js/controller/ProdutoController.js"></script>
+
+  </body> 
+
+</html>

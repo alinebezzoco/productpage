@@ -1,0 +1,460 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+  font-family: 'Baskerville Regular';
+  src: url("fonts/baskerville-regular.woff2") format("woff2"), url("fonts/baskerville-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Bell Centennial';
+  src: url("fonts/bellcentennialbt-address.woff2") format("woff2"), url("fonts/bellcentennialbt-address.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+.col-ld-01 {
+  width: 10%;
+  margin: 0; }
+
+.col-ld-02 {
+  width: 20%;
+  margin: 0; }
+
+.col-ld-03 {
+  width: 33.33333%;
+  margin: 0; }
+
+.col-ld-04 {
+  width: 40%;
+  margin: 0; }
+
+.col-ld-05 {
+  width: 50%;
+  margin: 0; }
+
+.col-ld-06 {
+  width: 60%;
+  margin: 0; }
+
+.col-ld-07 {
+  width: 70%;
+  margin: 0; }
+
+.col-ld-08 {
+  width: 80%;
+  margin: 0; }
+
+.col-ld-09 {
+  width: 90%;
+  margin: 0; }
+
+.col-ld-10 {
+  width: 100%;
+  margin: 0; }
+
+@media screen and (max-width: 992px) {
+  .col-md-01 {
+    width: 10%;
+    margin: 0; }
+
+  .col-md-02 {
+    width: 20%;
+    margin: 0; }
+
+  .col-md-03 {
+    width: 33.33333%;
+    margin: 0; }
+
+  .col-md-04 {
+    width: 40%;
+    margin: 0; }
+
+  .col-md-05 {
+    width: 50%;
+    margin: 0; }
+
+  .col-md-06 {
+    width: 60%;
+    margin: 0; }
+
+  .col-md-07 {
+    width: 70%;
+    margin: 0; }
+
+  .col-md-08 {
+    width: 80%;
+    margin: 0; }
+
+  .col-md-09 {
+    width: 90%;
+    margin: 0; }
+
+  .col-md-10 {
+    width: 100%;
+    margin: 0; } }
+@media screen and (max-width: 768px) {
+  .col-td-01 {
+    width: 10%;
+    margin: 0; }
+
+  .col-td-02 {
+    width: 20%;
+    margin: 0; }
+
+  .col-td-03 {
+    width: 33.33333%;
+    margin: 0; }
+
+  .col-td-04 {
+    width: 40%;
+    margin: 0; }
+
+  .col-td-05 {
+    width: 50%;
+    margin: 0; }
+
+  .col-td-06 {
+    width: 60%;
+    margin: 0; }
+
+  .col-td-07 {
+    width: 70%;
+    margin: 0; }
+
+  .col-td-08 {
+    width: 80%;
+    margin: 0; }
+
+  .col-td-09 {
+    width: 90%;
+    margin: 0; }
+
+  .col-td-10 {
+    width: 100%;
+    margin: 0; } }
+@media screen and (max-width: 640px) {
+  .col-sd-01 {
+    width: 10%;
+    margin: 0; }
+
+  .col-sd-02 {
+    width: 20%;
+    margin: 0; }
+
+  .col-sd-03 {
+    width: 33.33333%;
+    margin: 0; }
+
+  .col-sd-04 {
+    width: 40%;
+    margin: 0; }
+
+  .col-sd-05 {
+    width: 50%;
+    margin: 0; }
+
+  .col-sd-06 {
+    width: 60%;
+    margin: 0; }
+
+  .col-sd-07 {
+    width: 70%;
+    margin: 0; }
+
+  .col-sd-08 {
+    width: 80%;
+    margin: 0; }
+
+  .col-sd-09 {
+    width: 90%;
+    margin: 0; }
+
+  .col-sd-10 {
+    width: 100%;
+    margin: 0; } }
+html, body {
+  overflow-x: hidden; }
+
+body {
+  overflow-y: hidden; }
+
+h1 {
+  font-family: "Bell Centennial", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding-bottom: 65px; }
+
+h2 {
+  font-family: "Bell Centennial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding-bottom: 40px; }
+
+h3 {
+  font-family: "Bell Centennial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center; }
+
+i.bag {
+  background-image: url("../img/icones/bag.png");
+  width: 31px;
+  height: 25px; }
+
+i.carrinho {
+  background-image: url("../img/icones/carrinho.png");
+  width: 17px;
+  height: 15px; }
+
+i.seta {
+  background-image: url("../img/icones/seta.png");
+  width: 9px;
+  height: 5px;
+  display: inline-block; }
+
+* {
+  margin: 0 auto;
+  padding: 0; }
+
+header {
+  position: relative;
+  height: 100px;
+  margin-bottom: 44px;
+  border-bottom: 3px solid #ff9f1c;
+  width: 100%;
+  background-color: white; }
+  header img {
+    margin-top: 30px;
+    float: left; }
+  header .sacola p {
+    position: relative;
+    top: 0;
+    margin-top: 7px;
+    right: 50%;
+    float: right;
+    margin-right: -18px;
+    z-index: 1;
+    color: white;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    width: 15px;
+    height: 15px; }
+  header .sacola i {
+    margin-top: 30px;
+    float: right;
+    margin-right: 0; }
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  padding-bottom: 150px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .container .nome-pagina {
+    float: left; }
+  .container .select {
+    float: right; }
+  .container .wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    clear: both; }
+    .container .wrapper .filtro-busca {
+      -webkit-flex: 1.34;
+          -ms-flex: 1.34;
+              flex: 1.34; }
+      .container .wrapper .filtro-busca .ver-todas {
+        font-family: "Open Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        color: #666666; }
+    .container .wrapper .lista-produtos {
+      -webkit-flex: 4;
+          -ms-flex: 4;
+              flex: 4; }
+      .container .wrapper .lista-produtos .produto {
+        float: left; }
+      .container .wrapper .lista-produtos h3 {
+        max-width: 140px;
+        padding-bottom: 20px;
+        height: 20px; }
+      .container .wrapper .lista-produtos img {
+        margin-bottom: 25px;
+        width: 100%;
+        max-width: 220px;
+        display: block; }
+      .container .wrapper .lista-produtos i {
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 16px; }
+      .container .wrapper .lista-produtos a {
+        width: 52px;
+        height: 34px;
+        background-color: #ff9f1c;
+        border: none;
+        float: right; }
+      .container .wrapper .lista-produtos .descricao-produto {
+        padding-bottom: 50px;
+        float: left;
+        padding-left: 50px; }
+        .container .wrapper .lista-produtos .descricao-produto p {
+          font-family: "Baskerville Regular", serif;
+          font-size: 16px;
+          font-weight: 600;
+          text-align: right;
+          color: black; }
+        .container .wrapper .lista-produtos .descricao-produto span {
+          font-family: "Baskerville Regular", serif;
+          font-size: 14px;
+          font-weight: 300;
+          display: block;
+          text-align: right;
+          color: black; }
+          .container .wrapper .lista-produtos .descricao-produto span.valor-desconto {
+            font-size: 12px;
+            display: inline-block;
+            text-decoration: line-through;
+            color: #666; }
+    .container .wrapper .btn-mais {
+      background-color: #ff9f1c;
+      color: white;
+      font-size: 14px;
+      font-family: "Bell Centennial", sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 15px 80px;
+      line-height: 12px;
+      border: none;
+      letter-spacing: 2px;
+      position: relative;
+      left: 50%;
+      margin-left: -140px;
+      top: 50%;
+      margin-top: 80px;
+      cursor: pointer;
+      display: block;
+      clear: both; }
+
+.radio {
+  padding-bottom: 60px; }
+  .radio input[type='radio'] {
+    display: none; }
+  .radio.cores input[type='radio'] + label, .radio.preco input[type='radio'] + label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    display: block;
+    padding-bottom: 8px;
+    color: black; }
+  .radio.cores input[type='radio'] + label span, .radio.preco input[type='radio'] + label span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: -1px 10px 0 0;
+    cursor: pointer;
+    vertical-align: middle;
+    border: 1px solid #d8d8d8;
+    background-color: white; }
+  .radio.cores input[type='radio']:checked + label span, .radio.preco input[type='radio']:checked + label span {
+    background-color: #ff9f1c;
+    box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 8px #ff9f1c; }
+  .radio.tamanhos input[type='radio'] + label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    padding-bottom: 8px;
+    color: #afafaf; }
+  .radio.tamanhos input[type='radio'] + label span {
+    line-height: 30px;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    margin: -1px 10px 0 0;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #d8d8d8;
+    background-color: white; }
+  .radio.tamanhos input[type='radio']:checked + label span {
+    color: black;
+    border: 1px solid #ff9f1c; }
+
+.select select {
+  background: url(/assets/img/icones/seta.png) right 10px center no-repeat #FFF;
+  -webkit-appearance: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  min-height: 30px;
+  padding: 0 35px 0 10px;
+  color: #555; }
+
+footer {
+  height: 50px;
+  background-color: black; }
+  footer p {
+    font-family: "Open Sans", sans-serif;
+    padding: 15px;
+    text-align: center;
+    color: #999999;
+    font-size: 12px; }
+
+@media screen and (max-width: 992px) {
+  header .sacola i {
+    margin-right: 40px; }
+
+  .container .wrapper .filtro-busca {
+    -webkit-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5; }
+  .container .wrapper .lista-produtos {
+    -webkit-flex: 2;
+        -ms-flex: 2;
+            flex: 2; }
+    .container .wrapper .lista-produtos .descricao-produto {
+      padding-left: 50px; }
+  .container .wrapper .btn-mais {
+    margin-left: -200px; } }
+@media screen and (max-width: 768px) {
+  .container .nome-pagina {
+    text-align: center; }
+  .container .select {
+    display: none; }
+  .container .wrapper .filtro-busca {
+    display: none; }
+  .container .wrapper .lista-produtos .descricao-produto {
+    padding-left: 70px; }
+  .container .wrapper .lista-produtos a {
+    position: relative;
+    right: 50%;
+    margin-right: -100px; }
+  .container .wrapper .btn-mais {
+    margin-left: -140px; } }
+@media screen and (max-width: 640px) {
+  .container .wrapper .lista-produtos .descricao-produto {
+    padding-left: 40px; } }
+@media screen and (max-width: 475px) {
+  .container .wrapper .lista-produtos .descricao-produto {
+    padding-left: 20px; }
+    .container .wrapper .lista-produtos .descricao-produto p,
+    .container .wrapper .lista-produtos .descricao-produto span {
+      text-align: center; }
+    .container .wrapper .lista-produtos .descricao-produto span {
+      padding-left: 20px; }
+  .container .wrapper .lista-produtos a {
+    margin-bottom: 30px;
+    margin-right: -25px;
+    display: block;
+    top: 50%;
+    margin-top: 60px; }
+
+  footer p {
+    padding: 10px; } }
